@@ -5,3 +5,5 @@ git clone https://github.com/psgganesh/sandboxing-with-websockets.git
 git checkout step3
 npm run dev
 ```
+
+![Diagram](https://github.com/psgganesh/sandboxing-with-websockets/blob/step3/chat.png?raw=true)
