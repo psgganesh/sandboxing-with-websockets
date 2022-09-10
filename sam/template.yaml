@@ -94,8 +94,8 @@ Resources:
   Stage:
     Type: AWS::ApiGatewayV2::Stage
     Properties:
-      StageName: Prod
-      Description: Prod Stage
+      StageName: production
+      Description: Production Stage
       DeploymentId: !Ref Deployment
       ApiId: !Ref SimpleWebSocket
   ConnectionsTable:
