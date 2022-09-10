@@ -1,27 +1,43 @@
-# Sandboxing with APIGateway Web-Sockets 🔌 💬
+# Step 1: Setting up the backend using SAM CLI
 
-# Overview
-The intent of this project is to educate builders about the features of 
-[Amazon APIGateway WebSocket APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html) 
-and how to quickly build a chat application with it.
+## Install and configure the SAM CLI
+### What is AWS SAM?
+AWS SAM is short for Serverless Application Model. It is an open-source project that helps create and deploy serverless apps on AWS.
 
-### Intended audience
-Users who want to create chat applications using websockets and users who have a basic knowledge of working on HTML/CSS 
-and JS and ability to execute basic terminal commands and atl east Node.js v14 installed.
+AWS SAM has multiple components. Today, we'll be covering 2 things in high level, just to give you a taste.
 
-### Estimated duration
-> The expected duration to work on this project is 1.5 hours
+#### 1. SAM Template
+A SAM template helps you write serverless resource configuration really fast. It is like CloudFormation, but supercharged. When deploying, SAM template "transforms" itself into a CloudFormation template before deploying just like a regular CloudFormation template. Today will go through a SAM template in a high level.
 
-### This entire project can be run on an AWS account on free tier
-> Most but not all the resources you will launch using this project is eligible for free tier. Do understand your 
-> aws account may incur additional charges if it is kept running longer than free tier usage terms.
+#### 2. SAM CLI
+The SAM CLI is a tool to get you started with SAM based applications really quickly. As a developer, it helps you with bootstrapping, building, testing, and deploying. Today, we'll be going through a few of these things.
 
-### Services covered
-- [Amazon APIGateway WebSocket APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html)
-- [AWS Lambda](https://aws.amazon.com/lambda/)
-- [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
-- [AWS Serverless Application Model - SAM](https://aws.amazon.com/serverless/sam/)
-- [Amazon Simple Storage Service / S3](https://aws.amazon.com/s3/)
+AWS SAM provides you with a command line tool, the AWS SAM CLI, that makes it easy for you to create and manage serverless applications. You need to install and configure a few things in order to use the AWS SAM CLI.
 
-### Pre-requisites
-- AWS account (admin role recommended)
+To install the AWS SAM CLI, see the following instructions for your development host:
+
+- [Installing the AWS SAM CLI on Linux](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install-linux.html)
+- [Installing the AWS SAM CLI on Windows](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install-windows.html)
+- [Installing the AWS SAM CLI on macOS](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install-mac.html)
+
+## What are we building ?
+```
+.
+├── onconnect                   <-- Lambda Source code onconnect
+├── ondisconnect                <-- Lambda Source code ondisconnect
+├── onsend                      <-- Lambda Source code onsend
+└── template.yaml               <-- SAM template for Lambda Functions and DDB
+```
+
+### AWS SAM CLI commands
+
+If you prefer, you can install the [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html) and use it to package, deploy, and describe your application.  These are the commands you'll need to use:
+
+```shell
+sam deploy --guided
+```
+
+**Note:** `.gitignore` contains the `samconfig.toml`, hence make sure backup this file, or modify your .gitignore locally.
+
+### Credits for this SAM template
+This SAM template is a modified version of the SAM template which is referred from [AWS Blog](https://aws.amazon.com/blogs/compute/announcing-websocket-apis-in-amazon-api-gateway/)
