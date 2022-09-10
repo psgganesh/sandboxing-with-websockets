@@ -23,7 +23,7 @@ npm install
 cp .env.example .env
 ```
 
-### 4. Bring up the local server
+#### 4. Bring up the local server
 ```shell
 npm run dev
 ```
