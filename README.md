@@ -2,9 +2,9 @@
 The frontend is a simple javascript project written using Vite, VueJS, TailwindCSS.
 
 ## Overview
-Vite - Vite (French word for "quick", pronounced /vit/, like "veet") is a build tool that aims to provide a faster and leaner development experience for modern web projects.
-VueJS - An approachable, performant and versatile framework for building web user interfaces.
-TailwindCSS - A CSS framework to rapidly build modern websites without ever leaving your HTML.
+- Vite - Vite (French word for "quick", pronounced /vit/, like "veet") is a build tool that aims to provide a faster and leaner development experience for modern web projects.
+- VueJS - An approachable, performant and versatile framework for building web user interfaces.
+- TailwindCSS - A CSS framework to rapidly build modern websites without ever leaving your HTML.
 
 #### 1. Clone this repository onto local
 > Ensure you have nodejs v16.17.0 installed on your local. 
