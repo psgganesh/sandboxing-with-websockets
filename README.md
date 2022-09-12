@@ -3,6 +3,7 @@
 ```shell
 git clone https://github.com/psgganesh/sandboxing-with-websockets.git
 git checkout step3
+npm install
 npm run dev
 ```
 
